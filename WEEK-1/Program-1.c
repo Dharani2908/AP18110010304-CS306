@@ -5,13 +5,14 @@ main ()
   
 int state = 0, i = 0;
   
-char current, input[20];
+
+char c, S[30];
   
-printf ("Enter input string \t :");
+printf ("Enter An Input string \t :");
   
-scanf ("%s", input);
+scanf ("%s",S);
   
-while ((current = input[i++]) != '\0')
+while ((c = S[i++]) != '\0')
     {
       
 switch (state)
@@ -19,11 +20,11 @@ switch (state)
 	{
 	
 case 0:
-	  if (current == 'a')
+	  if (c == 'a')
 	    
 state = 1;
 	  
-	  else if (current == 'b')
+	  else if (c == 'b')
 	    
 state = 2;
 	  
@@ -40,11 +41,11 @@ exit (0);
 break;
 	
 case 1:
-	  if (current == 'a')
+	  if (c == 'a')
 	    
 state = 0;
 	  
-	  else if (current == 'b')
+	  else if (c == 'b')
 	    
 state = 3;
 	  
@@ -61,11 +62,11 @@ exit (0);
 break;
 	
 case 2:
-	  if (current == 'a')
+	  if (c == 'a')
 	    
 state = 3;
 	  
-	  else if (current == 'b')
+	  else if (c == 'b')
 	    
 state = 0;
 	  
@@ -82,11 +83,11 @@ exit (0);
 break;
 	
 case 3:
-	  if (current == 'a')
+	  if (c == 'a')
 	    
 state = 2;
 	  
-	  else if (current == 'b')
+	  else if (c == 'b')
 	    
 state = 1;
 	  
